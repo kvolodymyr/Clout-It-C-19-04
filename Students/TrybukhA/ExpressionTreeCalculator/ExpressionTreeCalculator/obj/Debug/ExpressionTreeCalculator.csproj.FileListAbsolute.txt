@@ -1,0 +1,6 @@
+C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.exe.config
+C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.exe
+C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.pdb
+C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csprojAssemblyReference.cache
+C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.exe
+C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.pdb
