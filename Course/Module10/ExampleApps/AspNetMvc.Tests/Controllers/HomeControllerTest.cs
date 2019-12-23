@@ -19,8 +19,8 @@ namespace AspNetMvc.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            // ViewResult result = controller.Index() as ViewResult;
-            ActionResult result = controller.Index().Result;
+            ViewResult result = controller.Index() as ViewResult;
+            // ActionResult result = controller.Index().Result;
 
             // Assert
             Assert.IsNotNull(result);
@@ -46,7 +46,7 @@ namespace AspNetMvc.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Contact("") as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
