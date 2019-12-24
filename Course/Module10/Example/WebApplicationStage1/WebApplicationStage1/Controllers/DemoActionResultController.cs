@@ -16,6 +16,7 @@ namespace WebApplicationStage1.Controllers
         {
             ViewBag.Title = "Action Results Demo";
             ViewBag.Message = "???";
+            ViewBag.Help = "https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.actionresult?view=aspnet-mvc-5.2";
 
             ViewBag.Actions = new Dictionary<string, string> {
                 { "ViewResult", "DemoViewResult" },
