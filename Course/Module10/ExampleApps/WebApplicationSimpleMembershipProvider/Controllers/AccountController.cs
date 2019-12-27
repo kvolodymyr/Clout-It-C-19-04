@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.Security;
 using WebMatrix.WebData;
 
 namespace MvcInternetApplication.Controllers
@@ -27,6 +28,9 @@ namespace MvcInternetApplication.Controllers
             if (!WebSecurity.Initialized)
             {
                 WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+                WebSecurity.CreateUserAndAccount("Admin", "Admin");
+                Roles.CreateRole("Administrator");
+                Roles.AddUserToRole("Admin", "Administrator");
             }
             return View();
         }

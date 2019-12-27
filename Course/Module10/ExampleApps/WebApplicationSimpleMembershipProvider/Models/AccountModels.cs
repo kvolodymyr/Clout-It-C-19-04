@@ -9,30 +9,33 @@ using WebMatrix.WebData;
 
 namespace MvcInternetApplication.Models
 {
+    // enable-migrations -ContextTypeName MvcInternetApplication.Models.UsersContext
+    // add-migration initial
+    // update-database
     // https://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx
     public class UsersContext : DbContext
     {
         public UsersContext()
             : base("DefaultConnection")
         {
-            Database.SetInitializer<UsersContext>(new CreateDatabaseIfNotExists<UsersContext>());
-            //Database.SetInitializer<SchoolDBContext>(new DropCreateDatabaseIfModelChanges<SchoolDBContext>());
-            //Database.SetInitializer<SchoolDBContext>(new DropCreateDatabaseAlways<SchoolDBContext>());
-            //Database.SetInitializer<SchoolDBContext>(new SchoolDBInitializer());
+            // Database.SetInitializer<UsersContext>(new CreateDatabaseIfNotExists<UsersContext>());
+            // Database.SetInitializer<UsersContext>(new DropCreateDatabaseIfModelChanges<UsersContext>());
+            // Database.SetInitializer<UsersContext>(new DropCreateDatabaseAlways<UsersContext>());
+            // Database.SetInitializer<UsersContext>(new UsersDBInitializer());
         }
 
 
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
 
-    public class SchoolDBInitializer : CreateDatabaseIfNotExists<UsersContext>
+    public class UsersDBInitializer : CreateDatabaseIfNotExists<UsersContext>
     {
         protected override void Seed(UsersContext context)
         {
             base.Seed(context);
-            WebSecurity.CreateUserAndAccount("Admin", "Admin");
-            Roles.CreateRole("Administrator");
-            Roles.AddUserToRole("Admin", "Administrator");
+            //WebSecurity.CreateUserAndAccount("Admin", "Admin");
+            //Roles.CreateRole("Administrator");
+            //Roles.AddUserToRole("Admin", "Administrator");
         }
     }
 
