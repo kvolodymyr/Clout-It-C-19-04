@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PizzaShopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PizzaShopModelStoreContainer">
+    <EntitySet Name="Ingredient" EntityType="PizzaShopModel.Store.Ingredient" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pizza" EntityType="PizzaShopModel.Store.Pizza" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Recipe" EntityType="PizzaShopModel.Store.Recipe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecipeItems" EntityType="PizzaShopModel.Store.RecipeItems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Table" EntityType="PizzaShopModel.Store.Table" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MarketSet" EntityType="PizzaShopModel.Store.MarketSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_RecipeItems_Ingredient" Association="PizzaShopModel.Store.FK_RecipeItems_Ingredient">
+      <End Role="Ingredient" EntitySet="Ingredient" />
+      <End Role="RecipeItems" EntitySet="RecipeItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pizza_Recipe" Association="PizzaShopModel.Store.FK_Pizza_Recipe">
+      <End Role="Recipe" EntitySet="Recipe" />
+      <End Role="Pizza" EntitySet="Pizza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Pizza" Association="PizzaShopModel.Store.FK_Table_Pizza">
+      <End Role="Pizza" EntitySet="Pizza" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecipeItems_Recipe" Association="PizzaShopModel.Store.FK_RecipeItems_Recipe">
+      <End Role="Recipe" EntitySet="Recipe" />
+      <End Role="RecipeItems" EntitySet="RecipeItems" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Measure" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pizza">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Recipe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Persons" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RecipeItems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngredientId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Measure" Type="int" Nullable="false" />
+    <Property Name="RecipeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PizzaId" Type="int" Nullable="false" />
+    <Property Name="OrderedAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MarketSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_RecipeItems_Ingredient">
+    <End Role="Ingredient" Type="PizzaShopModel.Store.Ingredient" Multiplicity="1" />
+    <End Role="RecipeItems" Type="PizzaShopModel.Store.RecipeItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RecipeItems">
+        <PropertyRef Name="IngredientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pizza_Recipe">
+    <End Role="Recipe" Type="PizzaShopModel.Store.Recipe" Multiplicity="1" />
+    <End Role="Pizza" Type="PizzaShopModel.Store.Pizza" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Recipe">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pizza">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Pizza">
+    <End Role="Pizza" Type="PizzaShopModel.Store.Pizza" Multiplicity="1" />
+    <End Role="Table" Type="PizzaShopModel.Store.Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pizza">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="PizzaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecipeItems_Recipe">
+    <End Role="Recipe" Type="PizzaShopModel.Store.Recipe" Multiplicity="1" />
+    <End Role="RecipeItems" Type="PizzaShopModel.Store.RecipeItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipe">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RecipeItems">
+        <PropertyRef Name="RecipeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PizzaShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PizzaShopEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ingredient" EntityType="PizzaShopModel.Ingredient" />
+          <EntitySet Name="Pizza" EntityType="PizzaShopModel.Pizza" />
+          <EntitySet Name="Recipe" EntityType="PizzaShopModel.Recipe" />
+          <EntitySet Name="RecipeItems" EntityType="PizzaShopModel.RecipeItems" />
+          <EntitySet Name="Table" EntityType="PizzaShopModel.Table" />
+          <AssociationSet Name="FK_RecipeItems_Ingredient" Association="PizzaShopModel.FK_RecipeItems_Ingredient">
+            <End Role="Ingredient" EntitySet="Ingredient" />
+            <End Role="RecipeItems" EntitySet="RecipeItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pizza_Recipe" Association="PizzaShopModel.FK_Pizza_Recipe">
+            <End Role="Recipe" EntitySet="Recipe" />
+            <End Role="Pizza" EntitySet="Pizza" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Pizza" Association="PizzaShopModel.FK_Table_Pizza">
+            <End Role="Pizza" EntitySet="Pizza" />
+            <End Role="Table" EntitySet="Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RecipeItems_Recipe" Association="PizzaShopModel.FK_RecipeItems_Recipe">
+            <End Role="Recipe" EntitySet="Recipe" />
+            <End Role="RecipeItems" EntitySet="RecipeItems" />
+          </AssociationSet>
+          <EntitySet Name="MarketSet" EntityType="PizzaShopModel.Market" />
+        </EntityContainer>
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Measure" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="RecipeItems" Relationship="PizzaShopModel.FK_RecipeItems_Ingredient" FromRole="Ingredient" ToRole="RecipeItems" />
+        </EntityType>
+        <EntityType Name="Pizza">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Recipe" Relationship="PizzaShopModel.FK_Pizza_Recipe" FromRole="Pizza" ToRole="Recipe" />
+          <NavigationProperty Name="Table" Relationship="PizzaShopModel.FK_Table_Pizza" FromRole="Pizza" ToRole="Table" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Persons" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pizza" Relationship="PizzaShopModel.FK_Pizza_Recipe" FromRole="Recipe" ToRole="Pizza" />
+          <NavigationProperty Name="RecipeItems" Relationship="PizzaShopModel.FK_RecipeItems_Recipe" FromRole="Recipe" ToRole="RecipeItems" />
+        </EntityType>
+        <EntityType Name="RecipeItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IngredientId" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="Measure" Type="Int32" Nullable="false" />
+          <Property Name="RecipeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ingredient" Relationship="PizzaShopModel.FK_RecipeItems_Ingredient" FromRole="RecipeItems" ToRole="Ingredient" />
+          <NavigationProperty Name="Recipe" Relationship="PizzaShopModel.FK_RecipeItems_Recipe" FromRole="RecipeItems" ToRole="Recipe" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PizzaId" Type="Int32" Nullable="false" />
+          <Property Name="OrderedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Pizza" Relationship="PizzaShopModel.FK_Table_Pizza" FromRole="Table" ToRole="Pizza" />
+        </EntityType>
+        <Association Name="FK_RecipeItems_Ingredient">
+          <End Type="PizzaShopModel.Ingredient" Role="Ingredient" Multiplicity="1" />
+          <End Type="PizzaShopModel.RecipeItems" Role="RecipeItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredient">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RecipeItems">
+              <PropertyRef Name="IngredientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pizza_Recipe">
+          <End Type="PizzaShopModel.Recipe" Role="Recipe" Multiplicity="1" />
+          <End Type="PizzaShopModel.Pizza" Role="Pizza" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Recipe">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pizza">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Pizza">
+          <End Type="PizzaShopModel.Pizza" Role="Pizza" Multiplicity="1" />
+          <End Type="PizzaShopModel.Table" Role="Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pizza">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Table">
+              <PropertyRef Name="PizzaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RecipeItems_Recipe">
+          <End Type="PizzaShopModel.Recipe" Role="Recipe" Multiplicity="1" />
+          <End Type="PizzaShopModel.RecipeItems" Role="RecipeItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Recipe">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RecipeItems">
+              <PropertyRef Name="RecipeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Market">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PizzaShopModelStoreContainer" CdmEntityContainer="PizzaShopEntities">
+    <EntitySetMapping Name="Ingredient">
+      <EntityTypeMapping TypeName="IsTypeOf(PizzaShopModel.Ingredient)">
+        <MappingFragment StoreEntitySet="Ingredient">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pizza">
+      <EntityTypeMapping TypeName="IsTypeOf(PizzaShopModel.Pizza)">
+        <MappingFragment StoreEntitySet="Pizza">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recipe">
+      <EntityTypeMapping TypeName="IsTypeOf(PizzaShopModel.Recipe)">
+        <MappingFragment StoreEntitySet="Recipe">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Persons" ColumnName="Persons" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecipeItems">
+      <EntityTypeMapping TypeName="IsTypeOf(PizzaShopModel.RecipeItems)">
+        <MappingFragment StoreEntitySet="RecipeItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="IsTypeOf(PizzaShopModel.Table)">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PizzaId" ColumnName="PizzaId" />
+          <ScalarProperty Name="OrderedAt" ColumnName="OrderedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarketSet">
+      <EntityTypeMapping TypeName="IsTypeOf(PizzaShopModel.Market)">
+        <MappingFragment StoreEntitySet="MarketSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
