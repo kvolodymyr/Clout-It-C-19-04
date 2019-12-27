@@ -4,3 +4,15 @@ C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\D
 C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csprojAssemblyReference.cache
 C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.exe
 C:\Users\Arseniy\Desktop\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.pdb
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.exe.config
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.exe
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.pdb
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csprojAssemblyReference.cache
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csproj.GenerateResource.cache
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csproj.CoreCompileInputs.cache
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.exe
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.pdb
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.Resources.Messages.ru.resources
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ru\ExpressionTreeCalculator.resources.dll
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.Resources.Messages.resources
+C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ru\ExpressionTreeCalculator.resources.dll

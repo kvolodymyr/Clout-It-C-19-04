@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ExpressionTreeCalculator.Resources;
+using System;
+using System.Globalization;
+using System.Threading;
 
 namespace ExpressionTreeCalculator
 {
@@ -8,8 +11,11 @@ namespace ExpressionTreeCalculator
 
         static void Main(string[] args)
         {
-            Console.WriteLine(" Enter the expression with " +
-                    "'+', '-', '*', '/', '(', ')' signs");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru-RU");
+
+            Console.WriteLine(Messages.Greeting);
+            Console.WriteLine(Messages.GoodbyeMessage);
+            return;
             while (true)
             {
                 string s = "";
