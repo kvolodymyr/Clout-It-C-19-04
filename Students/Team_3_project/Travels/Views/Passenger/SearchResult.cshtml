@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchResult</title>
+</head>
+<body>
+    <div>
+        <h3>Search result</h3>
+        <h2>@ViewBag.Success</h2>
+        <table>
+            <tr>
+                <td><p>UserName</p></td>
+                <td><p>Route</p></td>
+                <td></td>
+            </tr>
+
+            @foreach (var b in ViewBag.Result)
+            {
+                <tr>
+                    <td><p>@b.UserName</p></td>
+                    <td><p>@b.TravelRoute</p></td>
+                    <td>
+                        <form method="post" action="RequestForDriver">
+                            <input hidden="hidden" name="id" value="@b.Id" />
+                            <input type="submit" value="Send" />
+                        </form>
+                    </td>
+                    <td></td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
