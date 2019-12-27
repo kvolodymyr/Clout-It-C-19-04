@@ -10,7 +10,7 @@ namespace WebForms.Model
 {
     // enable-migrations -ContextTypeName WebForms.Model.SchoolContext
     // add-migration initial
-    // update-database.
+    // update-database
     public class SchoolContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
