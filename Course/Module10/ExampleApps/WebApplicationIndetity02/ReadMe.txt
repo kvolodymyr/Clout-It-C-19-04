@@ -252,3 +252,8 @@ Update Layout, remove unnecessary code in Home/Index
 
 14. Link with EF
 Install-Package Microsoft.AspNet.Identity.EntityFramework
+
+
+
+Enable-Migrations -EnableAutomaticMigrations
+Update-Database
