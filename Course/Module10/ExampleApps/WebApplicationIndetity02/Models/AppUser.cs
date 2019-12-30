@@ -9,6 +9,17 @@ namespace WebApplicationIndetity.Models
 {
     public class AppUser : IdentityUser
     {
+        public AppUser() { 
+        }
+
+        public AppUser(ClaimsPrincipal principal)
+        {
+            Name = principal.FindFirst(ClaimTypes.Name).Value;
+            Country = principal.FindFirst(ClaimTypes.Country).Value;
+        }
+
+        public string Name { get; set; }
+
         public string Country { get; set; }
 
         public int Age { get; set; }

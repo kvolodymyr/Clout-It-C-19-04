@@ -61,7 +61,9 @@ namespace WebApplicationIndetity.Controllers
         {
             var identity = await userManager.CreateIdentityAsync(
                 user, DefaultAuthenticationTypes.ApplicationCookie);
+
             identity.AddClaim(new Claim(ClaimTypes.Country, user.Country));
+
             GetAuthenticationManager().SignIn(identity);
         }
 

@@ -14,8 +14,7 @@ namespace WebApplicationIndetity.Controllers
         {
             get
             {
-                // return new AppUser(this.User as ClaimsPrincipal);
-                return new AppUser();
+                return new AppUser(this.User as ClaimsPrincipal);
             }
         }
     }
