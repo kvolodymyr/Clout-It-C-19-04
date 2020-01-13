@@ -60,21 +60,23 @@
         <h1>ViewBag.Success</h1>
         <h1>Доступные Маршруты</h1>
         <div>
-            <table>
+            <table name="drivers">
                 <tr>
                     <th><p>Водитель</p></th>
                     <th><p>Маршрут</p></th>
                     <th><p>Выбор</p></th>
+                    <th><p>Action</p></th>
                 </tr>
                 @if (ViewBag.Result.Count != 0)
                 {
                 foreach (var driver in ViewBag.Result)
                 {
-                    <tr>
-                        <td><p>@driver.UserName</p></td>
-                        <td><p>@driver.TravelRoute</p></td>
-                        <td><input type="radio" name="radioButton" style="width: 20px; height: 20px;"></td>
-                    </tr>
+                <tr>
+                    <td><p>@driver.UserName</p></td>
+                    <td><p>@driver.TravelRoute</p></td>
+                    <td><input type="radio" name="radioButton" style="width: 20px; height: 20px;"></td>
+                    <td><button class="send" disabled="disabled" data-driverId="@driver.UserName">Send</button></td>
+                </tr>
                 }
                 }
                 else
@@ -86,6 +88,7 @@
 
         <div>
             <form method="post" action="">
+                <input type="hidden" name="driver">
                 <input type="text" name="searchRequset" placeholder="Введите точку посадки из выбранного маршрута">
                 <div class="send-request">
                     <input type="submit" value="Отправить заявку на выбранный маршрут" />

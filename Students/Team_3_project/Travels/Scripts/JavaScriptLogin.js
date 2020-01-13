@@ -33,3 +33,38 @@ $('#forgotten').click(function () {
         $("#forgotten-container").fadeIn();
     });
 });*/
+
+
+//function myFunction(y) {
+//    var x = document.getElementsByName('radioButton');
+//    for (var i = 0; i < x.length; i++) {
+//        if (x[i].checked == true) {
+//            let z = document.getElementById(y).disabled;
+//            z = false;
+//        }
+//    }
+//}
+
+// $("button.send", container)
+// $container.find("button.send")[0].disabled = false;
+// alert(this.value);
+// alert($(this).data("id"));
+
+$("[name=radioButton]").click(function () {
+    let $that = $(this);
+    let $container = $that.parents("tr");
+    $("table[name='drivers']").find("button.send").attr("disabled", "disabled");
+    $container.find("button.send").removeAttr("disabled");
+});
+
+
+$("button.send").click(function () {
+    let $form = $("form");
+    let route = $("[name='searchRequset']", $form).val();
+    if (!route) {
+        alert('Add route');
+        return;
+    }
+    $("[name='driver']", $form).val($(this).data("driverid"));
+    $form.submit();
+});
