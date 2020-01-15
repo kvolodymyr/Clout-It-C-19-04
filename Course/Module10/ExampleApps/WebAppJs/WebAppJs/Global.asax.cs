@@ -1,27 +1,20 @@
-﻿using AspNetIdentityApp;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Travels.Models;
 
-namespace Travels
+namespace WebAppJs
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
-            //initialize DB when app starts
-           // Database.SetInitializer(new EmployeeDBInitializer());
             AreaRegistration.RegisterAllAreas();
-
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
