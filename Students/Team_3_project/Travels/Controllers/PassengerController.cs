@@ -29,7 +29,7 @@ namespace Travels.Controllers
  
         // Post: Search request
         [HttpPost]
-        public ActionResult Search(string searchRequset)
+        public ActionResult Search(string searchRequset, string driver)
         {
             ApplicationEmployeeManager userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationEmployeeManager>();
             List<Employee> drivers = userManager.Users.ToList().Where(x => x.TravelRoute.Contains(searchRequset.ToLower()) && userManager.IsInRoleAsync(x.Id, "Driver").ConfigureAwait(false).GetAwaiter().GetResult()).ToList();
@@ -56,7 +56,5 @@ namespace Travels.Controllers
  /*               ViewBag.Success = $"Success\t Request to Driver {result[0].FirstName} has been sent";*/
             return View("SearchResult");
         }
-
-        
     }
 }
