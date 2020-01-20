@@ -1,6 +1,7 @@
 ﻿READ:
 https://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-1
 https://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-2
+https://professorweb.ru/my/ASP_NET/identity/level1/
 
 Install NuGet packages
 1. Microsoft.Owin.Host.SystemWeb - ASP.NET Identity is actually built on top of OWIN which means the same identity 
