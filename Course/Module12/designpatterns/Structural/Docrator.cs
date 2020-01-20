@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace designpatterns.Structural
 {
     /// <summary>
-
     /// The 'Component' abstract class
-
     /// </summary>
-
     abstract class LibraryItem
-
     {
         private int _numCopies;
 
@@ -29,11 +25,8 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'ConcreteComponent' class
-
     /// </summary>
-
     class Book : LibraryItem
 
     {
@@ -59,11 +52,8 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'ConcreteComponent' class
-
     /// </summary>
-
     class Video : LibraryItem
 
     {
@@ -93,13 +83,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'Decorator' abstract class
-
     /// </summary>
-
     abstract class Decorator : LibraryItem
-
     {
         protected LibraryItem libraryItem;
 
@@ -117,18 +103,13 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'ConcreteDecorator' class
-
     /// </summary>
-
     class Borrowable : Decorator
-
     {
         protected List<string> borrowers = new List<string>();
 
         // Constructor
-
         public Borrowable(LibraryItem libraryItem)
           : base(libraryItem)
         {

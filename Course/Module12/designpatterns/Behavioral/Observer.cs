@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 namespace designpatterns.Behavioral
 {
     /// <summary>
-
     /// The 'Subject' abstract class
-
     /// </summary>
-
     abstract class Stock
 
     {
@@ -20,7 +17,6 @@ namespace designpatterns.Behavioral
         private List<IInvestor> _investors = new List<IInvestor>();
 
         // Constructor
-
         public Stock(string symbol, double price)
         {
             this._symbol = symbol;
@@ -53,7 +49,6 @@ namespace designpatterns.Behavioral
         {
             get { return _price; }
             set
-
             {
                 if (_price != value)
                 {
@@ -72,13 +67,9 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// The 'ConcreteSubject' class
-
     /// </summary>
-
     class IBM : Stock
-
     {
         // Constructor
 
@@ -89,31 +80,22 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// The 'Observer' interface
-
     /// </summary>
-
     interface IInvestor
-
     {
         void Update(Stock stock);
     }
 
     /// <summary>
-
     /// The 'ConcreteObserver' class
-
     /// </summary>
-
     class Investor : IInvestor
-
     {
         private string _name;
         private Stock _stock;
 
         // Constructor
-
         public Investor(string name)
         {
             this._name = name;
@@ -126,7 +108,6 @@ namespace designpatterns.Behavioral
         }
 
         // Gets or sets the stock
-
         public Stock Stock
         {
             get { return _stock; }

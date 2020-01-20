@@ -64,13 +64,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'RefinedAbstraction' class
-
     /// </summary>
-
     class Customers : CustomersBase
-
     {
         // Constructor
 
@@ -82,7 +78,6 @@ namespace designpatterns.Structural
         public override void ShowAll()
         {
             // Add separator lines
-
             Console.WriteLine();
             Console.WriteLine("------------------------");
             base.ShowAll();

@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace designpatterns.Structural
 {
     /// <summary>
-
     /// The 'Subsystem ClassA' class
-
     /// </summary>
-
     class Bank
-
     {
         public bool HasSufficientSavings(Customer c, int amount)
         {
@@ -23,13 +19,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'Subsystem ClassB' class
-
     /// </summary>
-
     class Credit
-
     {
         public bool HasGoodCredit(Customer c)
         {
@@ -39,13 +31,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'Subsystem ClassC' class
-
     /// </summary>
-
     class Loan
-
     {
         public bool HasNoBadLoans(Customer c)
         {
@@ -55,13 +43,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// Customer class
-
     /// </summary>
-
     class Customer
-
     {
         private string _name;
 
@@ -81,13 +65,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'Facade' class
-
     /// </summary>
-
     class Mortgage
-
     {
         private Bank _bank = new Bank();
         private Loan _loan = new Loan();

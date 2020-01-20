@@ -7,26 +7,20 @@ using System.Threading.Tasks;
 namespace designpatterns.Behavioral
 {
     /// <summary>
-
     /// The 'Context' class
-
     /// </summary>
-
     class Context
-
     {
         private string _input;
         private int _output;
 
         // Constructor
-
         public Context(string input)
         {
             this._input = input;
         }
 
         // Gets or sets input
-
         public string Input
         {
             get { return _input; }
@@ -34,7 +28,6 @@ namespace designpatterns.Behavioral
         }
 
         // Gets or sets output
-
         public int Output
         {
             get { return _output; }
@@ -43,13 +36,9 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// The 'AbstractExpression' class
-
     /// </summary>
-
     abstract class Expression
-
     {
         public void Interpret(Context context)
         {
@@ -87,19 +76,12 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'TerminalExpression' class
-
     /// <remarks>
-
     /// Thousand checks for the Roman Numeral M 
-
     /// </remarks>
-
     /// </summary>
-
     class ThousandExpression : Expression
-
     {
         public override string One() { return "M"; }
         public override string Four() { return " "; }
@@ -109,19 +91,12 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'TerminalExpression' class
-
     /// <remarks>
-
     /// Hundred checks C, CD, D or CM
-
     /// </remarks>
-
     /// </summary>
-
     class HundredExpression : Expression
-
     {
         public override string One() { return "C"; }
         public override string Four() { return "CD"; }
@@ -131,19 +106,12 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'TerminalExpression' class
-
     /// <remarks>
-
     /// Ten checks for X, XL, L and XC
-
     /// </remarks>
-
     /// </summary>
-
     class TenExpression : Expression
-
     {
         public override string One() { return "X"; }
         public override string Four() { return "XL"; }
@@ -153,19 +121,12 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'TerminalExpression' class
-
     /// <remarks>
-
     /// One checks for I, II, III, IV, V, VI, VI, VII, VIII, IX
-
     /// </remarks>
-
     /// </summary>
-
     class OneExpression : Expression
-
     {
         public override string One() { return "I"; }
         public override string Four() { return "IV"; }
