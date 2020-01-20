@@ -15,7 +15,7 @@ namespace ExpressionTreeCalculator
 
             Console.WriteLine(Messages.Greeting);
             Console.WriteLine(Messages.GoodbyeMessage);
-            return;
+            
             while (true)
             {
                 string s = "";

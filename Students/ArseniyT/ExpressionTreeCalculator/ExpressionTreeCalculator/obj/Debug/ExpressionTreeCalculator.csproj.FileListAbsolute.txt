@@ -16,3 +16,15 @@ C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculat
 C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ru\ExpressionTreeCalculator.resources.dll
 C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.Resources.Messages.resources
 C:\ITCloud\Git\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ru\ExpressionTreeCalculator.resources.dll
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.exe.config
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.exe
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ExpressionTreeCalculator.pdb
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\bin\Debug\ru\ExpressionTreeCalculator.resources.dll
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csprojAssemblyReference.cache
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.Resources.Messages.resources
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.Resources.Messages.ru.resources
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csproj.GenerateResource.cache
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.csproj.CoreCompileInputs.cache
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ru\ExpressionTreeCalculator.resources.dll
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.exe
+D:\Sandbox\Cloud-it\!Repository-Work\Clout-It-C-19-04\Students\ArseniyT\ExpressionTreeCalculator\ExpressionTreeCalculator\obj\Debug\ExpressionTreeCalculator.pdb
