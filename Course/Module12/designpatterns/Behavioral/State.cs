@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace designpatterns.Behavioral
 {
     /// <summary>
-
     /// The 'State' abstract class
-
     /// </summary>
-
     abstract class State
-
     {
         protected Account account;
         protected double balance;
@@ -23,7 +19,6 @@ namespace designpatterns.Behavioral
         protected double upperLimit;
 
         // Properties
-
         public Account Account
         {
             get { return account; }
@@ -43,24 +38,16 @@ namespace designpatterns.Behavioral
 
 
     /// <summary>
-
     /// A 'ConcreteState' class
-
     /// <remarks>
-
     /// Red indicates that account is overdrawn 
-
     /// </remarks>
-
     /// </summary>
-
     class RedState : State
-
     {
         private double _serviceFee;
 
         // Constructor
-
         public RedState(State state)
         {
             this.balance = state.Balance;
@@ -71,7 +58,6 @@ namespace designpatterns.Behavioral
         private void Initialize()
         {
             // Should come from a datasource
-
             interest = 0.0;
             lowerLimit = -100.0;
             upperLimit = 0.0;
@@ -106,23 +92,14 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'ConcreteState' class
-
     /// <remarks>
-
     /// Silver indicates a non-interest bearing state
-
     /// </remarks>
-
     /// </summary>
-
     class SilverState : State
-
     {
         // Overloaded constructors
-
-
         public SilverState(State state) :
           this(state.Balance, state.Account)
         {
@@ -138,7 +115,6 @@ namespace designpatterns.Behavioral
         private void Initialize()
         {
             // Should come from a datasource
-
             interest = 0.0;
             lowerLimit = 0.0;
             upperLimit = 1000.0;
@@ -245,29 +221,22 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// The 'Context' class
-
     /// </summary>
-
     class Account
-
     {
         private State _state;
         private string _owner;
 
         // Constructor
-
         public Account(string owner)
         {
             // New accounts are 'Silver' by default
-
             this._owner = owner;
             this._state = new SilverState(0.0, this);
         }
 
         // Properties
-
         public double Balance
         {
             get { return _state.Balance; }

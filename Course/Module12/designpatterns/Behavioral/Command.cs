@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace designpatterns.Behavioral
 {
     /// <summary>
-
     /// The 'Command' abstract class
-
     /// </summary>
-
     abstract class Command
-
     {
         public abstract void Execute();
         public abstract void UnExecute();
@@ -26,7 +22,6 @@ namespace designpatterns.Behavioral
     /// </summary>
 
     class CalculatorCommand : Command
-
     {
         private char _operator;
         private int _operand;
@@ -57,21 +52,18 @@ namespace designpatterns.Behavioral
         }
 
         // Execute new command
-
         public override void Execute()
         {
             _calculator.Operation(_operator, _operand);
         }
 
         // Unexecute last command
-
         public override void UnExecute()
         {
             _calculator.Operation(Undo(_operator), _operand);
         }
 
         // Returns opposite operator for given operator
-
         private char Undo(char @operator)
         {
             switch (@operator)

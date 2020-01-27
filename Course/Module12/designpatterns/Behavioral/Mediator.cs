@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace designpatterns.Behavioral
 {
     /// <summary>
-
     /// The 'Mediator' abstract class
-
     /// </summary>
-
     abstract class AbstractChatroom
-
     {
         public abstract void Register(Participant participant);
         public abstract void Send(
@@ -21,13 +17,9 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// The 'ConcreteMediator' class
-
     /// </summary>
-
     class Chatroom : AbstractChatroom
-
     {
         private Dictionary<string, Participant> _participants =
           new Dictionary<string, Participant>();
@@ -55,33 +47,26 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// The 'AbstractColleague' class
-
     /// </summary>
-
     class Participant
-
     {
         private Chatroom _chatroom;
         private string _name;
 
         // Constructor
-
         public Participant(string name)
         {
             this._name = name;
         }
 
         // Gets participant name
-
         public string Name
         {
             get { return _name; }
         }
 
         // Gets chatroom
-
         public Chatroom Chatroom
         {
             set { _chatroom = value; }
@@ -89,14 +74,12 @@ namespace designpatterns.Behavioral
         }
 
         // Sends message to given participant
-
         public void Send(string to, string message)
         {
             _chatroom.Send(_name, to, message);
         }
 
         // Receives message from given participant
-
         public virtual void Receive(
           string from, string message)
         {
@@ -106,16 +89,11 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'ConcreteColleague' class
-
     /// </summary>
-
     class Beatle : Participant
-
     {
         // Constructor
-
         public Beatle(string name)
           : base(name)
         {
@@ -129,16 +107,11 @@ namespace designpatterns.Behavioral
     }
 
     /// <summary>
-
     /// A 'ConcreteColleague' class
-
     /// </summary>
-
     class NonBeatle : Participant
-
     {
         // Constructor
-
         public NonBeatle(string name)
           : base(name)
         {

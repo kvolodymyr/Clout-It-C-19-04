@@ -65,7 +65,6 @@ namespace designpatterns
 
             #region Prototype Design Pattern
             //ColorManager colormanager = new ColorManager();
-
             //// Initialize with standard colors
 
             //colormanager["red"] = new Color(255, 0, 0);
@@ -111,12 +110,11 @@ namespace designpatterns
 
             #region Structural
             #region Adapter
-            // Non-adapted chemical compound
+            //// Non - adapted chemical compound
             //Compound unknown = new Compound("Unknown");
             //unknown.Display();
 
             //// Adapted chemical compounds
-
             //Compound water = new RichCompound("Water");
             //water.Display();
 
@@ -128,15 +126,13 @@ namespace designpatterns
             #endregion
 
             #region Bridge
-            // Create RefinedAbstraction
+            //// Create RefinedAbstraction
             //Customers customers = new Customers("Chicago");
 
             //// Set ConcreteImplementor
-
             //customers.Data = new CustomersData();
 
             //// Exercise the bridge
-
             //customers.Show();
             //customers.Next();
             //customers.Show();
@@ -149,29 +145,23 @@ namespace designpatterns
 
             #region Composite
             //// Create a tree structure 
-            //CompositeElement root =
-            //  new CompositeElement("Picture");
+            //CompositeElement root = new CompositeElement("Picture");
             //root.Add(new PrimitiveElement("Red Line"));
             //root.Add(new PrimitiveElement("Blue Circle"));
             //root.Add(new PrimitiveElement("Green Box"));
 
             //// Create a branch
-
-            //CompositeElement comp =
-            //  new CompositeElement("Two Circles");
+            //CompositeElement comp = new CompositeElement("Two Circles");
             //comp.Add(new PrimitiveElement("Black Circle"));
             //comp.Add(new PrimitiveElement("White Circle"));
             //root.Add(comp);
 
             //// Add and remove a PrimitiveElement
-
-            //PrimitiveElement pe =
-            //  new PrimitiveElement("Yellow Line");
+            //PrimitiveElement pe = new PrimitiveElement("Yellow Line");
             //root.Add(pe);
             //root.Remove(pe);
 
             //// Recursively display nodes
-
             //root.Display(1);
             #endregion
 
@@ -195,7 +185,7 @@ namespace designpatterns
             #endregion
 
             #region Facade
-            // Facade
+            //// Facade
             //Mortgage mortgage = new Mortgage();
             //// Evaluate mortgage eligibility for customer
             //Customer customer = new Customer("Ann McKinsey");
@@ -205,18 +195,15 @@ namespace designpatterns
 
             #region Flyweight
             //// Build a document with text
-
             //string document = "AAZZBBZB";
             //char[] chars = document.ToCharArray();
 
             //CharacterFactory factory = new CharacterFactory();
 
             //// extrinsic state
-
             //int pointSize = 10;
 
             //// For each character use a flyweight object
-
             //foreach (char c in chars)
             //{
             //    pointSize++;
@@ -260,22 +247,19 @@ namespace designpatterns
             #endregion
 
             #region Command
-            //// Create user and let her compute
+            ////// Create user and let her compute
             //User user = new User();
 
             //// User presses calculator buttons
-
             //user.Compute('+', 100);
             //user.Compute('-', 50);
             //user.Compute('*', 10);
             //user.Compute('/', 2);
 
             //// Undo 4 commands
-
             //user.Undo(4);
 
             //// Redo 3 commands
-
             //user.Redo(3);
             #endregion
 
@@ -292,7 +276,6 @@ namespace designpatterns
             //tree.Add(new OneExpression());
 
             //// Interpret
-
             //foreach (Expression exp in tree)
             //{
             //    exp.Interpret(context);
@@ -315,11 +298,9 @@ namespace designpatterns
             //collection[8] = new Item("Item 8");
 
             //// Create iterator
-
             //Iterator iterator = collection.CreateIterator();
 
             //// Skip every other item
-
             //iterator.Step = 2;
 
             //Console.WriteLine("Iterating over collection:");
@@ -336,7 +317,6 @@ namespace designpatterns
             //Chatroom chatroom = new Chatroom();
 
             //// Create participants and register them
-
             //Participant George = new Beatle("George");
             //Participant Paul = new Beatle("Paul");
             //Participant Ringo = new Beatle("Ringo");
@@ -386,7 +366,6 @@ namespace designpatterns
             //ibm.Attach(new Investor("Berkshire"));
 
             //// Fluctuating prices will notify investors
-
             //ibm.Price = 120.10;
             //ibm.Price = 121.00;
             //ibm.Price = 120.50;
@@ -427,11 +406,11 @@ namespace designpatterns
             #endregion
 
             #region Template
-            DataAccessObject daoCategories = new Categories();
-            daoCategories.Run();
+            //DataAccessObject daoCategories = new Categories();
+            //daoCategories.Run();
 
-            DataAccessObject daoProducts = new Products();
-            daoProducts.Run();
+            //DataAccessObject daoProducts = new Products();
+            //daoProducts.Run();
             #endregion
 
             #region Visitor
@@ -442,7 +421,6 @@ namespace designpatterns
             //e.Attach(new ExecuterDirector());
 
             //// Employees are 'visited'
-
             //e.Accept(new IncomeVisitor());
             //e.Accept(new VacationVisitor());
             #endregion

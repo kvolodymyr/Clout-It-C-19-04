@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .column {
+            float: left;
+            width: 48%;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<form style="width:100%;">
+    <div class="row">
+        <div class="column">
+            <h1>1. Личные данные</h1>
+            <div>
+                Обращение* <input type="radio" name="gender" checked style="align-items:flex-end"> Господин <input type="radio" name="gender" style="align-items:flex-end"> Госпожа
+            </div>
+            <div>
+                <label style="width: 30%">Звание</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Имя</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="Sergey" style="width:50%;align-items:flex-end"></div>
+            </div>  
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Фамилия</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="Sergeev" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Улица</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="Lenina 22" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Индекс/Город</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="94000" style="align-items:flex-end;width:15%;"><input type="text" name="position" value="Kiev" style="align-items:flex-end;width:34%"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Страна</label>
+                <div style="width:65%;display: inline-block;float:right;"><select style="width:52%"><option value="Ukraine">Украина</option></select></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Валюта</label>
+                <div style="width:65%;display: inline-block;float:right;"><select style="width:52%;"><option value="Usd">Американский доллар (USD)</option></select></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Дата Рождения</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="18.09.1987" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">E-mail</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="Sersergey6547@gmail.com" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Мобильный телефон</label>
+                <div style="width:65%;display: inline-block;float:right;"><select style="width:10%"><option value="380">+380</option></select><input type="text" name="position" value="" style="align-items:flex-end;width:15%"><input type="text" name="position" value="" style="align-items:flex-end;width:24%"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Телефон</label>
+                <div style="width:65%;display: inline-block;float:right;"><select style="width:10%"><option value="380">+380</option></select><input type="text" name="position" value="" style="align-items:flex-end;width:15%"><input type="text" name="position" value="" style="align-items:flex-end;width:24%"></div>
+            </div>
+            <div style="clear:both"></div>
+
+    </div>
+        <div class="column">
+            <h1>2. Данные доступа</h1>
+            <div>
+                <label style="width: 30%">Пароль*</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="password" name="position" value="123456" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <div style="text-align:center;width:80%">(8-20 символов:<br />цифры и буквы)</div>
+            </div>
+            <div>
+                <label style="width: 30%">Надежность пароля</label>
+            </div>
+            <div>
+                <label style="width: 30%">Введите пароль еще раз*</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="password" name="position" value="123456" style="width:50%;align-items:flex-end"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Контрольный вопрос*</label>
+                <div style="width:65%;display: inline-block;float:right;"><select style="width:52%"><option value="Usd">Название ващего первого авто</option></select></div>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+                <label style="width: 30%">Ваш ответ*</label>
+                <div style="width:65%;display: inline-block;float:right;"><input type="text" name="position" value="seat lion" style="width:50%;align-items:flex-end;"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="background-color:gray;width:90%">
+                <input type="checkbox" style="width:100%;"> Я принимаю лицензию блаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблабла<br />блаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблабла<br />блаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблабла<br />блаблаблаблаблаблаблаблаблаблаблаблаблаблаблабла<br />блаблаблаблаблаблаблаблаблаблаблаблаблаблабла
+            </div>
+            <button value="" style="background-color:lightgreen;width:90%;height:50px;float:right;font-size:20px;color:white;">Зарегистрироваться прямо сейчас!</button>
+        </div>
+
+    </div>
+</form>
+</body>
+</html>

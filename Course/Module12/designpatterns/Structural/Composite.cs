@@ -7,18 +7,13 @@ using System.Threading.Tasks;
 namespace designpatterns.Structural
 {
     /// <summary>
-
     /// The 'Component' Treenode
-
     /// </summary>
-
     abstract class DrawingElement
-
     {
         protected string _name;
 
         // Constructor
-
         public DrawingElement(string name)
         {
             this._name = name;
@@ -30,13 +25,9 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'Leaf' class
-
     /// </summary>
-
     class PrimitiveElement : DrawingElement
-
     {
         // Constructor
 
@@ -65,19 +56,13 @@ namespace designpatterns.Structural
     }
 
     /// <summary>
-
     /// The 'Composite' class
-
     /// </summary>
-
     class CompositeElement : DrawingElement
-
     {
-        private List<DrawingElement> elements =
-          new List<DrawingElement>();
+        private List<DrawingElement> elements = new List<DrawingElement>();
 
         // Constructor
-
         public CompositeElement(string name)
           : base(name)
         {
@@ -95,11 +80,9 @@ namespace designpatterns.Structural
 
         public override void Display(int indent)
         {
-            Console.WriteLine(new String('-', indent) +
-              "+ " + _name);
+            Console.WriteLine(new String('-', indent) + "+ " + _name);
 
             // Display each child element on this node
-
             foreach (DrawingElement d in elements)
             {
                 d.Display(indent + 2);

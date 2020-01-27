@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace designpatterns.Behavioral
 {
     /// <summary>
-
     /// The 'Handler' abstract class
-
     /// </summary>
-
     abstract class Approver
-
     {
         protected Approver successor;
 
