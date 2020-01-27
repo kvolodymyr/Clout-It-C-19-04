@@ -1,0 +1,35 @@
+﻿@model string
+@{
+    Layout = null;
+}
+
+@helper ListArrayStringItems(string[] items)
+{
+    <ul>
+        @foreach (string value in items)
+        {
+        <li><b>@value</b></li>
+        }
+    </ul>
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        Фрукты:
+        @ListArrayStringItems(ViewBag.Fruits)
+    </div>
+    <div>
+        Города:
+        @ListArrayStringItems(ViewBag.Cities)
+    </div>
+    <div>
+        Сообщение:
+        <p>@Model</p>
+    </div>
+</body>
+</html>

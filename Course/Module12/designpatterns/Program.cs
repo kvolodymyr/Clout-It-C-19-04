@@ -15,15 +15,15 @@ namespace designpatterns
         {
             #region Creational
             #region Abstract Factory Design Pattern.
-            //// Create and run the African animal world
-            //ContinentFactory africa = new AfricaFactory();
-            //AnimalWorld world = new AnimalWorld(africa);
-            //world.RunFoodChain();
+            // Create and run the African animal world
+            ContinentFactory africa = new AfricaFactory();
+            AnimalWorld world = new AnimalWorld(africa);
+            world.RunFoodChain();
 
-            //// Create and run the American animal world
-            //ContinentFactory america = new AmericaFactory();
-            //world = new AnimalWorld(america);
-            //world.RunFoodChain();
+            // Create and run the American animal world
+            ContinentFactory america = new AmericaFactory();
+            world = new AnimalWorld(america);
+            world.RunFoodChain();
             #endregion
 
             #region  Builder Design Pattern.
