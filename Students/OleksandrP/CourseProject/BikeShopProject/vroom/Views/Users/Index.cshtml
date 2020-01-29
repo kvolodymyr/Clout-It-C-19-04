@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+    ViewData["Title"] = "Users List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 row">
+        <div class="col-6">
+            <h2 class="text-info">Users</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a class="btn btn-info" id="register" asp-area="Identity" asp-page="/Account/Register"><i class="fas fa-user-plus"></i> &nbsp;Add User</a>
+        </div>
+        <div class="col-12">
+            <table class="table table-striped border">
+                <tr class="table-info">
+                    <th>
+                        User Name
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+                @foreach (var user in Model)
+                {
+            <tr>
+                <td>@user.UserName</td>
+
+                <td class="text-right">
+                    @*<div class="btn-group">
+                        <a type="button" class="btn btn-sm btn-primary" asp-area="Identity" asp-page="/Account/Manage"><i class="far fa-edit"></i></a>*@
+                        <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                            <button onclick="if (!confirm('Вы уверены, что хотите удалить этого пользователя?')){ return false }" type="submit" class="btn btn-sm btn-danger">
+                                <i class="fas fa-user-slash"></i> &nbsp;Delete
+                            </button>
+                        </form>
+                </td>
+            </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="col-3"></div>
+</div>
